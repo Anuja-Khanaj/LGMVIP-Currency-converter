@@ -1,0 +1,99 @@
+import java.util.*;
+import java.text.DecimalFormat;
+class Currency_Converter
+{
+    public static void main(String[] args) 
+        {
+            double rs,dollar,pound,code,euro,KWD;
+            DecimalFormat f = new DecimalFormat("##.###");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("*** WelCome to Webeduclick Currency Converter Project ***\nEnter the currency code \n1:rss\n2:Dollar\n3:Pound\n4:Euro\n5:Kuwaiti dinar"); 
+            code=sc.nextInt();
+            if(code == 1)
+            {
+                System.out.println("Enter amount in rss:");
+                rs = sc.nextFloat();
+                dollar = rs / 75;
+                System.out.println("Dollar : "+f.format(dollar));
+                pound = rs / 101;
+                System.out.println("Pound : "+f.format(pound));
+                euro = rs / 84;
+                System.out.println("Euro : "+f.format(euro));
+                KWD = rs / 250;
+                System.out.println("Kuwaiti dinar : "+f.format(KWD));
+            }
+            else if (code == 2)
+            {
+                System.out.println("Enter amount in dollar:");
+                dollar = sc.nextFloat();
+                rs = dollar * 75;
+                System.out.println("rss : "+f.format(rs));
+                pound = dollar * 0.72;
+                System.out.println("Pound : "+f.format(pound));
+                euro = dollar * 0.88;
+                System.out.println("Euro : "+f.format(euro));
+                KWD = dollar * 0.30;
+                System.out.println("Kuwaiti dinar : "+f.format(KWD));
+            }
+            else if(code == 3)
+            {
+                System.out.println("Enter amount in Pound:");
+                pound = sc.nextFloat();
+                rs = pound * 101;
+                System.out.println("rss : "+f.format(rs));
+                dollar = pound * 1.35;
+                System.out.println("Dollar : "+f.format(dollar));
+                euro = pound * 1.36;
+                System.out.println("Euro : "+f.format(euro));
+                KWD = pound * 0.4;
+                System.out.println("Kuwaiti dinar : "+f.format(KWD));
+            }
+            else if(code == 4)
+            {
+                System.out.println("Enter amount in Euro:");
+                euro = sc.nextFloat();
+                rs = euro * 84;
+                System.out.println("rss : "+f.format(rs));
+                dollar = euro * 1.12;
+                System.out.println("Dollar : "+f.format(dollar));
+                pound = euro * 0.73;
+                System.out.println("Pound : "+f.format(pound));
+                KWD = euro * 0.34;
+                System.out.println("Kuwaiti dinar : "+f.format(KWD));
+            }
+            else if(code == 5)
+            {
+                System.out.println("Enter amount in Kuwaiti dinar:");
+                KWD = sc.nextFloat();
+                rs = KWD * 250;
+                System.out.println("rss : "+f.format(rs));
+                dollar = KWD * 3.30;
+                System.out.println("Dollar : "+f.format(dollar));
+                pound = KWD * 2.5;
+                System.out.println("Pound : "+f.format(pound));
+                euro = KWD * 2.94;
+                System.out.println("Euro : "+f.format(euro));
+            }
+            else
+                System.out.println("Invalid Code!");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
